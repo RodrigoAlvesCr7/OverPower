@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-//[CreateAssetMenu(fileName = "TankData", menuName = "OverPower/TankData" )]
-public class TankStats : MonoBehaviour
+
+[System.Serializable]
+public class TankStats
 {
     public string tankName;
 
