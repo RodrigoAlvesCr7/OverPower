@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fdab2d9daeefe004eb1454500f478f8e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - tankDB: {fileID: 11400000, guid: 0dcb8026eca00ca44bf59eb19798399b, type: 2}
+  - playerTeam: {fileID: 11400000, guid: e3551bab81db76e4f8652c65f8356361, type: 2}
+  - opponentTeam: {fileID: 11400000, guid: a4fd40fe16eb4fe4bb273b198f87f0f0, type: 2}
+  - nameText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

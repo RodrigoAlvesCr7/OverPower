@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff0a95f51187e245a86eb7559a705fb, type: 3}
+  m_Name: New Tank Data
+  m_EditorClassIdentifier: 
+  tankDatabase:
+  - tankName: Artillery
+    speedPrio: 0
+    fuelCap: 0
+    maxHealth: 0
+    currentHealth: 0
+  - tankName: Big Boy Chunky
+    speedPrio: 0
+    fuelCap: 0
+    maxHealth: 0
+    currentHealth: 0
+  - tankName: Mechanic
+    speedPrio: 0
+    fuelCap: 0
+    maxHealth: 0
+    currentHealth: 0
+  - tankName: Tunneler
+    speedPrio: 0
+    fuelCap: 0
+    maxHealth: 0
+    currentHealth: 0
+  - tankName: Molotov
+    speedPrio: 0
+    fuelCap: 0
+    maxHealth: 0
+    currentHealth: 0
+  - tankName: Cluster
+    speedPrio: 0
+    fuelCap: 0
+    maxHealth: 0
+    currentHealth: 0
+  - tankName: Kamikaze
+    speedPrio: 0
+    fuelCap: 0
+    maxHealth: 0
+    currentHealth: 0
+  - tankName: Knight
+    speedPrio: 0
+    fuelCap: 0
+    maxHealth: 0
+    currentHealth: 0
+  - tankName: Christmas Wonder
+    speedPrio: 0
+    fuelCap: 0
+    maxHealth: 0
+    currentHealth: 0
