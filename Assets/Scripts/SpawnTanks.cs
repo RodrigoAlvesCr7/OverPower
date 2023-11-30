@@ -15,7 +15,7 @@ public class SpawnTanks : MonoBehaviour
 
     public GameObject opponentTank;
 
-    public TankData playerTeamData;
+    /*public TankData playerTeamData;
 
     public TankData opponentTeamData;
 
@@ -25,7 +25,11 @@ public class SpawnTanks : MonoBehaviour
 
     InGameStats oTank1Stats;
     InGameStats oTank2Stats;
-    InGameStats oTank3Stats;
+    InGameStats oTank3Stats;*/
+
+    List<GameObject> tanks = new List<GameObject>();
+    public GameObject tank;
+    public int controlledTank = 6;
 
     public class TanksComparer : IComparer<GameObject>
     {
@@ -41,7 +45,7 @@ public class SpawnTanks : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        List<GameObject> tanks = new List<GameObject>();
+ 
         tanks.Add(Instantiate(playerTank, playerSpawnPoint1));
         tanks.Add(Instantiate(playerTank, playerSpawnPoint2));
         tanks.Add(Instantiate(playerTank, playerSpawnPoint3));
@@ -66,25 +70,47 @@ public class SpawnTanks : MonoBehaviour
         for (int i = 0; i < tanks.Count; i++)
         {
             InGameStats gameStats = tanks[i].GetComponent<InGameStats>();
-            gameStats.speedPrio = 5 - i;
+            gameStats.speedPrio = 6 - i;
+            Debug.Log(gameStats.speedPrio);
             if (gameStats.speedPrio < 1)
                 gameStats.speedPrio = 1;
+            
         }
 
         tanks.Sort(new TanksComparer());
+        
+
+        
     }
-    void NextTank()
+    public void NextTank()
     {
-        Debug.Log("Wip");
+        tank = tanks[controlledTank - 1];
+        tank.GetComponent<PlayerMovement>().enabled = true;
+        for (int i = 0; i < tanks.Count; i++)
+        {
+            if (tanks[i] != tank)
+            {
+                tanks[i].GetComponent<PlayerMovement>().enabled = false;
+            }
+        }
+        Debug.Log("Swapped Tank");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
+            if(controlledTank == 0)
+            {
+                //largest speedPrio we have
+                controlledTank = 6;
+            }
+            else
+            {
+                controlledTank -= 1;
+            }
             NextTank();
-            Debug.Log("Sorted");
         }
     }
 }
